@@ -1,0 +1,2 @@
+# friendly
+Make friends, now.
