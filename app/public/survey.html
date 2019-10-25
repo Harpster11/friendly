@@ -4,17 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CDNs, Jquery, Bootstrap, etc etc etc -->
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script
 			  src="https://code.jquery.com/jquery-3.4.1.min.js"
 			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 			  crossorigin="anonymous"></script>
-    <title>Friendly Survey</title>
+    <title>Friendsy Friend Finder</title>
 </head>
 <body>
     <div class="container">
         <h2>Survey Questions</h2>
         <hr>
-
+<!-- In put form for photo, name -->
         <h3><strong>Help Us Help You</strong></h3>
         <h4>Name (Yes You must)</h4>
         <input type="text" name="" id="name" class="form-control" required>
@@ -22,10 +31,10 @@
         <input type="text" name="" id="photo" class="form-control" required>
 
         <hr>
-
+<!-- Questions setup with incrementing IDs for storage -->
         <h3><strong>Question 1</strong></h3>
         <h4>You feel better when you wake up early in the morning.</h4>
-        <select date-placeholder="" class="chosen-select" id=q1></select>
+        <select date-placeholder="" id="q1"></select>
             <option value=""></option>
             <option value="1">Strongly Disagree</option>
             <option value="2">Somewhat Disagree</option>
@@ -35,7 +44,7 @@
 
     <h3><strong>Question 1</strong></h3>
         <h4>A full home is a happy home.</h4>
-            <select date-placeholder="" class="chosen-select" id=q2></select>
+            <select date-placeholder="" id="q2"></select>
                 <option value=""></option>
                 <option value="1">Strongly Disagree</option>
                 <option value="2">Somewhat Disagree</option>
@@ -45,7 +54,7 @@
 
         <h3><strong>Question 1</strong></h3>
                 <h4>It's better to go for something and regret it than stay home and stay safe.</h4>
-                <select date-placeholder="" class="chosen-select" id=q3></select>
+                <select date-placeholder="" id="q3"></select>
                     <option value=""></option>
                     <option value="1">Strongly Disagree</option>
                     <option value="2">Somewhat Disagree</option>
@@ -55,7 +64,7 @@
                     <h3><strong>Question 1</strong></h3>
                     
                     <h4>Quality of choices is more important than selection of choices.</h4>
-                    <select date-placeholder="" class="chosen-select" id=q4></select>
+                    <select date-placeholder="" id="q4"></select>
                         <option value=""></option>
                         <option value="1">Strongly Disagree</option>
                         <option value="2">Somewhat Disagree</option>
@@ -64,7 +73,7 @@
                         <option value="5">Strongly Agree</option>
                         
                         <h4>It's better to go slow and soak up the scenery.</h4>
-                        <select date-placeholder="" class="chosen-select" id=q5></select>
+                        <select date-placeholder="" id="q5"></select>
                             <option value=""></option>
                             <option value="1">Strongly Disagree</option>
                             <option value="2">Somewhat Disagree</option>
@@ -73,7 +82,7 @@
                             <option value="5">Strongly Agree</option>
 
                             <h4>Having one important project is better than having many small ones.</h4>
-                            <select date-placeholder="" class="chosen-select" id=q6></select>
+                            <select date-placeholder="" id="q6"></select>"
                                 <option value=""></option>
                                 <option value="1">Strongly Disagree</option>
                                 <option value="2">Somewhat Disagree</option>
@@ -83,7 +92,7 @@
 
                                 <h4>Time is more important than money.
                                 </h4>
-                                <select date-placeholder="" class="chosen-select" id=q7></select>
+                                <select date-placeholder="" id="q7"></select>
                                     <option value=""></option>
                                     <option value="1">Strongly Disagree</option>
                                     <option value="2">Somewhat Disagree</option>
@@ -92,7 +101,7 @@
                                     <option value="5">Strongly Agree</option>
 
                                     <h4>It's better to experience something than to regret not having tried.</h4>
-                                    <select date-placeholder="" class="chosen-select" id=q8></select>
+                                    <select date-placeholder="" id="q8"></select>
                                         <option value=""></option>
                                         <option value="1">Strongly Disagree</option>
                                         <option value="2">Somewhat Disagree</option>
@@ -101,7 +110,7 @@
                                         <option value="5">Strongly Agree</option>
 
                                         <h4>Temperance is key, i.e. too much of anything is a bad thing</h4>
-                                        <select date-placeholder="" class="chosen-select" id=q9></select>
+                                        <select date-placeholder="" id="q9"></select>
                                             <option value=""></option>
                                             <option value="1">Strongly Disagree</option>
                                             <option value="2">Somewhat Disagree</option>
@@ -110,7 +119,7 @@
                                             <option value="5">Strongly Agree</option>
             
                                             <h4>Style and execution matter as much as intention.</h4>
-                    <select date-placeholder="" class="chosen-select" id=q10></select>
+                    <select date-placeholder="" class="chosen-select" id="q10"></select>
                         <option value=""></option>
                         <option value="1">Strongly Disagree</option>
                         <option value="2">Somewhat Disagree</option>
@@ -118,6 +127,91 @@
                         <option value="4">Somewhat Agree</option>
                         <option value="5">Strongly Agree</option>
 
+<!-- Form submit button -->
+    <button type='submit' id='submit' class=''></button>
+    
+    <footer class='footer'>
+            <div class="container">
+                <p><a href='#'>API Friends List</a> | <a href='#'>GitHub Repo</a></p>
+            </div>
+    </footer>
     </div>
+<!-- Modal, imported from Bootstrap with modified IDs for our script -->
+    <div id="resultsModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2> id="matchName"></h2>
+                    <img id="matchImg"  src="https://media.licdn.com/mpr/mpr/shrnknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+                </div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Here we begin our javascript for the form submission handling -->
+    <script type="text/javascript"> 
+
+// begin function when user clicks the submit button
+        $("#submit").on("click", function() {
+            // creating a function to validate the content in the form to guard against bad data
+            function validateForm() {
+                // create a variable to determine if the for passes
+                var isValid = true;
+                // take inputs from a form field
+                $(".form-control").each(function() {
+                    // check if the form is empty
+                    if ($(this).val()==="") {
+                        isValid = false;
+                    }
+                });
+                // check to make sure the user has made a selection in all "select" fields
+                $('select').each(function(){
+                    if ($(this).val()=== "") {
+                        isValid = false;
+                    }
+                })
+                return isValid;
+            }
+    
+    // If the data from the form is valid, create a new object called userData with the answers from the form stored inside as attributes
+            if (validateForm()) {
+    
+                var userData = {
+                    name: $("#name").val(),
+                    photo: $("#photo").val(),
+                    scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val(),
+                    ]
+                };
+                var currentURL = window.location.origin;
+    // we are defining the path to the javascript data object where we will send our new user's data
+                $.post(currentURL + "/api/friends", userData, function(data){
+                    
+
+                    // writing the name of the matched answer from friends to the Modal window
+                    $("#matchName").text(data.name);
+                    $("#matchImg").attr("src", data.photo);
+
+                    $("#resultsModal").modal("toggle");
+                })
+            }
+        })
+    
+    </script>
+
+
 </body>
+
 </html>
