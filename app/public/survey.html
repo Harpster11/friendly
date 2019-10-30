@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- CDNs, Jquery, Bootstrap, etc etc etc -->
     <!-- Latest compiled and minified CSS -->
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <!-- Optional theme -->
@@ -13,10 +17,7 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script
-			  src="https://code.jquery.com/jquery-3.4.1.min.js"
-			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-			  crossorigin="anonymous"></script>
+   
     <title>Friendsy Friend Finder</title>
 </head>
 <body>
@@ -128,11 +129,12 @@
                         <option value="5">Strongly Agree</option>
                     </select>
 <!-- Form submit button -->
-    <button type='submit' id='submit' class=''></button>
-    
+    <br>
+    <button type='submit' id='submit' class='button'>Submit</button>
+    <br>
     <footer class='footer'>
             <div class="container">
-                <p><a href='#'>API Friends List</a> | <a href='#'>GitHub Repo</a></p>
+                <p><a href='/api/friends'>API Friends List</a> | <a href='#'>GitHub Repo</a></p>
             </div>
     </footer>
     </div>
@@ -142,7 +144,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h2> id="matchName"></h2>
+                    <h2 id="matchName"></h2>
                     <img id="matchImg"  src="https://media.licdn.com/mpr/mpr/shrnknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
                 </div>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -155,7 +157,9 @@
     <script type="text/javascript"> 
 
 // begin function when user clicks the submit button
-        $("#submit").on("click", function() {
+        $("#submit").on("click", function(event) {
+            event.preventDefault();
+            console.log("Submitted Form")
             // creating a function to validate the content in the form to guard against bad data
             function validateForm() {
                 // create a variable to determine if the for passes
@@ -196,10 +200,12 @@
                     ]
                 };
                 var currentURL = window.location.origin;
+                console.log(currentURL);
+                console.log(userData);
     // we are defining the path to the javascript data object where we will send our new user's data
                 $.post(currentURL + "/api/friends", userData, function(data){
-                    
-
+                    console.log("Post Route for Data")
+                    console.log("Data:"+data);
                     // writing the name of the matched answer from friends to the Modal window
                     $("#matchName").text(data.name);
                     $("#matchImg").attr("src", data.photo);

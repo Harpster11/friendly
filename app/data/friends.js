@@ -1,7 +1,7 @@
 var friends = [
     {
         name:"Hellen Keller",
-        photo:"",
+        photo:"https://en.wikipedia.org/wiki/Helen_Keller",
         scores: [
             "5",
             "5",
